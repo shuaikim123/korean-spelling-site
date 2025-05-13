@@ -1,0 +1,36 @@
+let current = 0;
+let score = 0;
+
+function getRandomIndex() {
+  return Math.floor(Math.random() * wordList.length);
+}
+
+function showWord() {
+  current = getRandomIndex();
+  document.getElementById('chinese').innerText = wordList[current].chinese;
+  document.getElementById('answer').value = '';
+  document.getElementById('feedback').innerText = '';
+}
+
+function checkAnswer() {
+  const userInput = document.getElementById('answer').value.trim();
+  const correct = wordList[current].korean;
+  const feedback = document.getElementById('feedback');
+
+  if (userInput === correct) {
+    feedback.innerText = "正确！";
+    feedback.className = "correct";
+    score += 1;
+  } else {
+    feedback.innerText = `错误，正确拼写是：${correct}`;
+    feedback.className = "wrong";
+  }
+
+  document.getElementById('score').innerText = score;
+}
+
+function nextWord() {
+  showWord();
+}
+
+window.onload = showWord;

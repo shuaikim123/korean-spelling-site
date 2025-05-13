@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>韩语单词拼写练习</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>韩语单词拼写练习</h2>
+    <p>中文提示：<span id="chinese"></span></p>
+    <input type="text" id="answer" placeholder="请输入韩语拼写">
+    <button onclick="checkAnswer()">提交</button>
+    <p id="feedback"></p>
+    <p>当前得分：<span id="score">0</span></p>
+    <button onclick="nextWord()">下一个</button>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+const wordList = [
+  { korean: "사과", chinese: "苹果" },
+  { korean: "학교", chinese: "学校" },
+  { korean: "물", chinese: "水" },
+  { korean: "친구", chinese: "朋友" },
+  { korean: "책", chinese: "书" },
+  { korean: "컴퓨터", chinese: "电脑" },
+  { korean: "시간", chinese: "时间" },
+];
